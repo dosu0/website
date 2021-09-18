@@ -1,0 +1,27 @@
+.navlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.nav {
+  color: #eceff4;
+  padding: 0 1em;
+}
+
+.navlist li {
+  float: left;
+}
+
+.navlist li.right {
+  float: right;
+}
+
+.navlist a {
+  display: block;
+  color: inherit;
+  padding: 1em 0.5em;
+  font-weight: 500;
+  font-size: 1.5em;
+}
