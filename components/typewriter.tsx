@@ -1,38 +1,11 @@
 import { useEffect, useState } from 'react';
 import styles from './typewriter.module.scss';
 
-/* interface TypewriterProps {
+type TypewriterProps = {
   sentences: string[];
-}
+};
 
 export default function Typewriter({ sentences }: TypewriterProps) {
-  const speed = 75;
-  const [char, setChar] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  function type() {
-    if (isDeleting) {
-      setChar(char - 1);
-    } else {
-      setChar(char + 1);
-    }
-
-    if (!isDeleting && char === sentences.length) {
-      setIsDeleting(true);
-    } else if (isDeleting && char === 0) {
-      setIsDeleting(false);
-      setSentence(sentence + 1);
-    }
-  }
-
-  useEffect(() => {
-    setTimeout(type, speed);
-    });
-
-  return <span>{sentence.substring(0, char)}</span>;
-  } */
-
-export default function Typewriter({ sentences }) {
   const [{ text, idx, isDeleting }, setState] = useState({
     text: '',
     idx: 0,

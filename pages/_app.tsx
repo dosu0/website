@@ -1,5 +1,10 @@
 import '@styles/global.scss';
 
-export default function App({ Component, pageProps }) {
+type AppProps = {
+    Component: React.FC;
+    pageProps: any;
+};
+
+export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }

@@ -4,6 +4,14 @@ import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
 
+export type PostData = {
+  id: string;
+  title: string;
+  lastModified: number;
+  date: string;
+  contentHtml: string;
+};
+
 const postsDirectory = path.join(process.cwd(), 'posts');
 
 export function getSortedPostsInfo() {
@@ -51,7 +59,7 @@ export function getPostIds() {
   });
 }
 
-export async function getPostData(id: string) {
+export async function getPostData(id: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const matterResult = matter(fileContents);
@@ -66,6 +74,9 @@ export async function getPostData(id: string) {
     id,
     lastModified,
     contentHtml,
-    ...matterResult.data,
+    ...(matterResult.data as {
+      title: string;
+      date: string;
+    }),
   };
 }
