@@ -25,7 +25,7 @@ export default function Home() {
 
         <p>
           Most of my projects are open-source and you can find them on{' '}
-          <a href="https://github.com/plat-phoenix">GitHub</a>.
+          <a href="https://github.com/dosu0">GitHub</a>.
         </p>
       </section>
     </Layout>

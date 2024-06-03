@@ -17,7 +17,7 @@ export default function Navbar() {
         </li>
         {/* TODO: add github logo instead */}
         <li className={styles.right}>
-          <Link href="https://github.com/plat-phoenix">
+          <Link href="https://github.com/dosu0">
             <a>github</a>
           </Link>
         </li>
