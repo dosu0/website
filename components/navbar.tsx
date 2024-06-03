@@ -7,18 +7,18 @@ export default function Navbar() {
       <ul className={styles.navlist}>
         <li>
           <Link href="/">
-            <a>home</a>
+            home
           </Link>
         </li>
         <li>
           <Link href="/blog">
-            <a>blog</a>
+            blog
           </Link>
         </li>
         {/* TODO: add github logo instead */}
         <li className={styles.right}>
           <Link href="https://github.com/dosu0">
-            <a>github</a>
+            github
           </Link>
         </li>
       </ul>

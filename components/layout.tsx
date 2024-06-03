@@ -6,7 +6,7 @@ import utilStyles from '@styles/util.module.scss';
 import { ReactNode } from 'react';
 import Navbar from '@components/navbar';
 
-const name = 'Phoenix';
+const name = 'Samuel';
 interface LayoutProps {
   children: ReactNode;
   home?: boolean;
@@ -17,7 +17,7 @@ export default function Layout({ children, home }: LayoutProps) {
     <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Phoenix's Website" />
+        <meta name="description" content="Samuel's Website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -40,26 +40,23 @@ export default function Layout({ children, home }: LayoutProps) {
           ) : (
             <>
               <Link href="/">
-                <a>
-                  <Image
-                    priority
-                    src="/img/profile.jpg"
-                    className={utilStyles.borderCircle}
-                    height={144}
-                    width={144}
-                    alt={name}
-                  />
-                </a>
+                <Image
+                  priority
+                  src="/img/profile.jpg"
+                  className={utilStyles.borderCircle}
+                  height={144}
+                  width={144}
+                  alt={name}
+                />
               </Link>
             </>
           )}
         </header>
+
         <main>{children}</main>
         {!home && (
           <div className={styles.backToHome}>
-            <Link href="/">
-              <a>← Back to the homepage</a>
-            </Link>
+            <Link href="/">← Back to the homepage</Link>
           </div>
         )}
       </div>

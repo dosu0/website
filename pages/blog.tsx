@@ -18,7 +18,7 @@ export default function Blog({ posts }: BlogProps) {
     <Layout>
       <Head>
         <title>Blog</title>
-        <meta name="og:title" content="Phoenix's Blog" />
+        <meta name="og:title" content="Samuel's Blog" />
       </Head>
       {/* blog posts */}
       <section className={`${styles.headingMd} ${styles.padding1px}`}>
@@ -27,7 +27,7 @@ export default function Blog({ posts }: BlogProps) {
           {posts.map(({ id, date, title }) => (
             <li key={id}>
               <Link href={`/posts/${id}`}>
-                <a>{title}</a>
+                {title}
               </Link>
               <br />
               <small>
